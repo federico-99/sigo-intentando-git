@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nivel Intermedio de HTML</title>
+    <link rel="stylesheet" href="intermedio.css" />
+  </head>
+
+  <body>
+    <!-- ENCABEZADO SEMÁNTICO -->
+    <header>
+      <h1>Ejemplo Nivel Intermedio</h1>
+      <nav>
+        <!-- Navegación principal -->
+        <ul>
+          <li><a href="#imagenes">Imágenes</a></li>
+          <li><a href="#multimedia">Multimedia</a></li>
+          <li><a href="#formularios">Formularios</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <!-- SECCIÓN DE IMÁGENES -->
+      <section id="imagenes">
+        <h2>Imágenes Avanzadas</h2>
+
+        <!-- <figure> agrupa imagen + pie de foto -->
+        <figure>
+          <img
+            src="https://picsum.photos/600/300"
+            alt="Ejemplo de imagen con figcaption"
+          />
+          <!-- <figcaption> describe la imagen -->
+          <figcaption>Paisaje de ejemplo con figcaption</figcaption>
+        </figure>
+
+        <!-- <picture> permite cargar diferentes imágenes según tamaño -->
+        <picture>
+          <!-- Si la pantalla es ancha se usa esta -->
+          <source media="(min-width: 800px)" srcset="https://picsum.photos/800/400" />
+          <!-- Si la pantalla es más pequeña se usa esta -->
+          <source media="(min-width: 400px)" srcset="https://picsum.photos/400/200" />
+          <!-- Fallback por defecto -->
+          <img src="https://picsum.photos/300/150" alt="Ejemplo responsivo con picture" />
+        </picture>
+      </section>
+
+      <!-- SECCIÓN DE MULTIMEDIA -->
+      <section id="multimedia">
+        <h2>Multimedia</h2>
+
+        <!-- VIDEO -->
+        <video controls width="400">
+          <!-- Fuente del video -->
+          <source src="media/video-ejemplo.mp4" type="video/mp4" />
+          <!-- Subtítulos accesibles -->
+          <track
+            src="media/subtitulos.vtt"
+            kind="subtitles"
+            srclang="es"
+            label="Español"
+          />
+          <!-- Mensaje fallback si el navegador no soporta video -->
+          Tu navegador no soporta la etiqueta <code>video</code>.
+        </video>
+
+        <!-- AUDIO -->
+        <audio controls>
+          <source src="media/audio-ejemplo.mp3" type="audio/mpeg" />
+          Tu navegador no soporta la etiqueta <code>audio</code>.
+        </audio>
+      </section>
+
+      <!-- SECCIÓN DE FORMULARIOS -->
+      <section id="formularios">
+        <h2>Formularios</h2>
+
+        <!-- FORMULARIO AGRUPADO CON FIELDSET -->
+        <form action="#" method="post">
+          <!-- Agrupación de datos personales -->
+          <fieldset>
+            <legend>Datos Personales</legend>
+
+            <!-- Campo de texto -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <!-- Campo de email -->
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+
+            <!-- Área de texto -->
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+          </fieldset>
+
+          <!-- Agrupación de preferencias -->
+          <fieldset>
+            <legend>Preferencias</legend>
+
+            <!-- Select -->
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+              <option value="es">España</option>
+              <option value="mx">México</option>
+              <option value="ar">Argentina</option>
+            </select>
+
+            <!-- Radio buttons -->
+            <p>Género:</p>
+            <label><input type="radio" name="genero" value="m" /> Masculino</label>
+            <label><input type="radio" name="genero" value="f" /> Femenino</label>
+
+            <!-- Checkbox -->
+            <p>Intereses:</p>
+            <label><input type="checkbox" name="interes" value="html" /> HTML</label>
+            <label><input type="checkbox" name="interes" value="css" /> CSS</label>
+            <label><input type="checkbox" name="interes" value="js" /> JavaScript</label>
+          </fieldset>
+
+          <!-- Botón de envío -->
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>Ejemplo HTML Nivel Intermedio © 2025</p>
+    </footer>
+  </body>
+</html>

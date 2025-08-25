@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nivel Avanzado de HTML</title>
+
+    <!-- Metadatos para SEO -->
+    <meta name="description" content="Ejemplo de un documento HTML avanzado con accesibilidad, formularios y elementos interactivos." />
+    <meta name="author" content="Tu nombre" />
+
+    <link rel="stylesheet" href="avanzado.css" />
+  </head>
+
+  <body>
+    <!-- HEADER SEMÁNTICO + ARIA -->
+    <header role="banner">
+      <h1>Ejemplo Nivel Avanzado</h1>
+      <nav role="navigation" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#accesibilidad">Accesibilidad</a></li>
+          <li><a href="#formularios">Formularios Avanzados</a></li>
+          <li><a href="#interactivos">Elementos Interactivos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- SECCIÓN ACCESIBILIDAD -->
+      <section id="accesibilidad" aria-labelledby="titulo-accesibilidad">
+        <h2 id="titulo-accesibilidad">Accesibilidad</h2>
+
+        <article>
+          <h3>Uso de <mark>etiquetas semánticas</mark></h3>
+          <p>
+            Este texto incluye la etiqueta <code>&lt;mark&gt;</code>, que resalta
+            una parte importante. Se suele usar para mostrar coincidencias en búsquedas.
+          </p>
+
+          <!-- Uso de <time> para fechas y horas -->
+          <p>
+            Publicado el <time datetime="2025-08-25">25 de agosto de 2025</time>.
+          </p>
+
+          <!-- Ejemplo de <meter> -->
+          <p>Nivel de progreso en HTML:</p>
+          <meter min="0" max="100" value="75">75%</meter>
+
+          <!-- Ejemplo de <progress> -->
+          <p>Descargando archivo...</p>
+          <progress max="100" value="50">50%</progress>
+        </article>
+      </section>
+
+      <!-- SECCIÓN FORMULARIOS AVANZADOS -->
+      <section id="formularios" aria-labelledby="titulo-formularios">
+        <h2 id="titulo-formularios">Formularios Avanzados</h2>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Datos avanzados</legend>
+
+            <!-- Fecha -->
+            <label for="fecha">Selecciona una fecha:</label>
+            <input type="date" id="fecha" name="fecha" required />
+
+            <!-- Color -->
+            <label for="color">Selecciona un color:</label>
+            <input type="color" id="color" name="color" />
+
+            <!-- Número con límites -->
+            <label for="edad">Edad (18-99):</label>
+            <input type="number" id="edad" name="edad" min="18" max="99" required />
+
+            <!-- Rango -->
+            <label for="satisfaccion">Nivel de satisfacción:</label>
+            <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10" />
+
+            <!-- Patrón para validación (ejemplo: código postal de 5 dígitos) -->
+            <label for="codigo">Código postal (5 dígitos):</label>
+            <input type="text" id="codigo" name="codigo" pattern="[0-9]{5}" title="Debe tener 5 números" required />
+
+            <!-- Botón de envío -->
+            <button type="submit">Enviar datos</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- SECCIÓN ELEMENTOS INTERACTIVOS -->
+      <section id="interactivos" aria-labelledby="titulo-interactivos">
+        <h2 id="titulo-interactivos">Elementos Interactivos</h2>
+
+        <!-- DETAILS + SUMMARY -->
+        <details>
+          <summary>Más información sobre este curso</summary>
+          <p>
+            Este ejemplo muestra cómo usar <code>&lt;details&gt;</code> y
+            <code>&lt;summary&gt;</code> para mostrar/ocultar contenido.
+          </p>
+        </details>
+
+        <!-- DIALOG (ejemplo de ventana modal) -->
+        <button id="abrir-dialogo">Abrir ventana modal</button>
+
+        <dialog id="miDialogo">
+          <p>Este es un ejemplo de <code>&lt;dialog&gt;</code> en HTML5.</p>
+          <button id="cerrar-dialogo">Cerrar</button>
+        </dialog>
+
+        <!-- TEMPLATE (contenido oculto que se puede clonar con JS) -->
+        <template id="plantilla-card">
+          <article class="card">
+            <h3>Título dinámico</h3>
+            <p>Este contenido viene de un &lt;template&gt;.</p>
+          </article>
+        </template>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>Ejemplo HTML Nivel Avanzado © 2025</p>
+    </footer>
+
+    <!-- SCRIPT PEQUEÑO PARA EL DIALOG -->
+    <script>
+      const abrir = document.getElementById("abrir-dialogo");
+      const cerrar = document.getElementById("cerrar-dialogo");
+      const dialogo = document.getElementById("miDialogo");
+
+      abrir.addEventListener("click", () => dialogo.showModal());
+      cerrar.addEventListener("click", () => dialogo.close());
+    </script>
+  </body>
+</html>

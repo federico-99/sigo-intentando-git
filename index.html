@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!-- 📌 Indica que el documento sigue la especificación HTML5 -->
+<html lang="es">
+  <!-- 📌 lang="es" define el idioma principal del contenido para accesibilidad y buscadores -->
+
+  <head>
+    <!-- 📌 Información meta del documento, no visible directamente -->
+
+    <meta charset="UTF-8" />
+    <!-- 📌 charset="UTF-8" permite usar acentos, ñ y caracteres especiales -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 📌 Hace que el diseño se adapte a pantallas pequeñas (responsive) -->
+
+    <title>Ejemplo: Imágenes y Multimedia</title>
+    <!-- 📌 Título de la pestaña del navegador -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- 📌 Conecta un archivo externo de CSS (hoja de estilos) -->
+  </head>
+
+  <body>
+    <!-- 📌 Todo el contenido visible en la página -->
+
+    <header>
+      <!-- 📌 Encabezado principal de la página -->
+      <h1>Ejemplo de imágenes y multimedia</h1>
+      <p>Practicando HTML + CSS con casos reales</p>
+    </header>
+
+    <main>
+      <!-- 📌 Contenido principal de la página -->
+
+      <!-- 🔹 Imagen básica -->
+      <section>
+        <!-- 📌 Agrupamos contenido en una sección temática -->
+        <h2>Imagen básica</h2>
+        <img
+          src="https://picsum.photos/800/400" alt="Paisaje de montaña al amanecer" loading="lazy" />
+          <!-- 📌 Dirección de la imagen -->
+           
+          <!-- 📌 Texto alternativo (accesibilidad y SEO) -->
+          
+          <!-- 📌 Carga diferida: mejora el rendimiento -->
+        
+      </section>
+
+      <!-- 🔹 Imagen con pie de foto -->
+      <section>
+        <h2>Imagen con pie de foto</h2>
+        <figure>
+          <!-- 📌 figure: agrupa imagen + pie de foto -->
+          <img
+            src="https://picsum.photos/id/1025/600/400"
+            alt="Un perro mirando a la cámara"
+            loading="lazy"
+          />
+          <figcaption>
+            <!-- 📌 Texto que acompaña la imagen -->
+            Un perro curioso posando para la foto
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- 🔹 Imagen responsiva -->
+      <section>
+        <h2>Imagen responsiva</h2>
+        <picture>
+          <!-- 📌 picture: permite mostrar distintas versiones según la pantalla -->
+          <source
+            srcset="https://picsum.photos/1200/600"
+            media="(min-width: 1024px)"/>
+            <!-- 📌 Si la pantalla tiene al menos 1024px, usa esta imagen -->
+          
+          <source
+            srcset="https://picsum.photos/800/400"
+            media="(min-width: 600px)"/>
+            <!-- 📌 Si la pantalla tiene entre 600px y 1023px -->
+          
+          <img
+            src="https://picsum.photos/400/300"
+            alt="Paisaje al atardecer"
+            loading="lazy"/>
+            <!-- 📌 Imagen por defecto si no aplica ningún source -->
+          
+        </picture>
+      </section>
+
+      <!-- 🔹 Video con subtítulos -->
+      <section>
+        <h2>Video con subtítulos</h2>
+        <video controls preload="none">
+          <!-- 📌 controls: muestra botones de reproducción -->
+          <!-- 📌 preload="none": no carga hasta que el usuario le da play -->
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4"/>
+            <!-- 📌 Fuente del video en formato MP4 -->
+          
+          <track
+            src="https://gist.githubusercontent.com/fernandojm/37c9868a2db1d05359307f3ad07c1f26/raw/9d263a56c3e5f7b93e8fdfda3e7d53f049a7f2d7/subtitulos.vtt"
+            kind="subtitles"
+            srclang="es"
+            label="Español"/>
+            <!-- 📌 Subtítulos en español -->
+          
+          Tu navegador no soporta video HTML5.
+          <!-- 📌 Mensaje alternativo si el navegador no soporta video -->
+        </video>
+      </section>
+
+      <!-- 🔹 Audio -->
+      <section>
+        <h2>Audio de ejemplo</h2>
+        <audio controls>
+          <!-- 📌 controls: muestra botones de play/pausa/volumen -->
+          <source
+            src="https://www.w3schools.com/html/horse.mp3"
+            type="audio/mpeg"
+          />
+          Tu navegador no soporta audio HTML5.
+        </audio>
+      </section>
+
+      <!-- 🔹 Formulario básico -->
+      <section>
+        <h2>Formulario básico</h2>
+        <form>
+          <!-- Edad -->
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" name="edad" min="0" max="120" />
+          <!-- 📌 Campo numérico entre 0 y 120 -->
+
+          <!-- Fecha -->
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" />
+          <!-- 📌 Campo para seleccionar una fecha -->
+
+          <!-- Mensaje -->
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+          <!-- 📌 Campo de texto largo -->
+
+          <!-- Checkbox -->
+          <label>
+            <input type="checkbox" name="suscripcion" />
+            Suscribirme al boletín
+          </label>
+
+          <!-- Color -->
+          <label for="color">Color favorito:</label>
+          <input type="color" id="color" name="color" />
+          <!-- 📌 Selector de color -->
+
+          <!-- Botón -->
+          <button type="submit">Enviar</button>
+          <!-- 📌 Envía el formulario -->
+        </form>
+      </section>
+
+      <!-- 🔹 Formulario intermedio -->
+      <section>
+        <h2>Formulario intermedio</h2>
+        <form action="/enviar" method="post">
+          <!-- 📌 action="/enviar": URL donde se envían los datos -->
+          <!-- 📌 method="post": envía datos de forma más segura que "get" -->
+
+          <fieldset>
+            <!-- 📌 Agrupa inputs relacionados -->
+            <legend>Datos personales</legend>
+            <!-- 📌 Título de ese grupo -->
+
+            <!-- Nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+            <!-- 📌 Campo de texto obligatorio -->
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <!-- 📌 Valida que tenga formato de email -->
+
+            <!-- Teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              pattern="[0-9]{9,15}"
+              placeholder="Ej: 1122334455"
+            />
+            <!-- 📌 Campo de teléfono con validación y ejemplo -->
+          </fieldset>
+
+          <!-- Motivo -->
+          <label for="motivo">Motivo de contacto:</label>
+          <select id="motivo" name="motivo">
+            <option value="consulta">Consulta</option>
+            <option value="soporte">Soporte técnico</option>
+            <option value="otros">Otros</option>
+          </select>
+          <!-- 📌 Lista desplegable -->
+
+          <!-- Mensaje -->
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+
+          <!-- Radios -->
+          <p><strong>¿Cómo prefieres que te contactemos?</strong></p>
+          <label>
+            <input type="radio" name="contacto" value="email" checked />
+            Email
+          </label>
+          <label>
+            <input type="radio" name="contacto" value="telefono" />
+            Teléfono
+          </label>
+          <!-- 📌 Radios permiten seleccionar solo una opción -->
+
+          <!-- Checkbox -->
+          <label>
+            <input type="checkbox" name="suscripcion" />
+            Suscribirme al boletín
+          </label>
+
+          <!-- Botones -->
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpiar</button>
+          <!-- 📌 reset reinicia el formulario (no se usa mucho en producción) -->
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <!-- 📌 Pie de página -->
+      <p>Ejemplo de práctica con HTML y CSS © 2025</p>
+    </footer>
+  </body>
+</html>

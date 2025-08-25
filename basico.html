@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Declaración de tipo de documento. Indica al navegador que usamos HTML5 -->
+<html lang="es">
+  <!-- Atributo lang="es" → idioma principal del documento (mejora accesibilidad y SEO) -->
+  <head>
+    <!-- Configuración de caracteres (UTF-8 soporta ñ, tildes y símbolos) -->
+    <meta charset="UTF-8" />
+    <!-- Configuración para que el diseño sea responsive (ajusta en móviles) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título que se muestra en la pestaña del navegador -->
+    <title>Nivel Básico de HTML</title>
+    <!-- Vinculación con el archivo CSS externo -->
+    <link rel="stylesheet" href="basico.css" />
+  </head>
+
+  <body>
+    <!-- Encabezado principal del sitio -->
+    <header>
+      <h1>Ejemplo Nivel Básico</h1>
+      <p>Este documento aplica etiquetas básicas de HTML con estilos en CSS.</p>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <!-- Sección de encabezados -->
+      <section>
+        <h2>Encabezados</h2>
+        <!-- Diferentes niveles de títulos -->
+        <h3>Título nivel 3</h3>
+        <h4>Título nivel 4</h4>
+        <h5>Título nivel 5</h5>
+        <h6>Título nivel 6</h6>
+      </section>
+
+      <!-- Sección de párrafos -->
+      <section>
+        <h2>Párrafos</h2>
+        <!-- Etiqueta <p> define un párrafo -->
+        <p>
+          Este es un párrafo de ejemplo. Los párrafos permiten organizar el
+          texto de manera clara y legible en el documento.
+        </p>
+        <p>
+          También se pueden usar <strong>negritas</strong> y
+          <em>cursivas</em> para dar énfasis.
+        </p>
+      </section>
+
+      <!-- Sección de enlaces -->
+      <section>
+        <h2>Enlaces</h2>
+        <!-- <a> crea hipervínculos -->
+        <!-- href indica la URL de destino -->
+        <!-- target="_blank" abre en una pestaña nueva -->
+        <p>
+          Visita
+          <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">
+            la documentación de HTML en MDN
+          </a>.
+        </p>
+      </section>
+
+      <!-- Sección de listas -->
+      <section>
+        <h2>Listas</h2>
+
+        <!-- Lista desordenada (<ul>) con viñetas -->
+        <h3>Lista desordenada</h3>
+        <ul>
+          <li>Manzanas</li>
+          <li>Naranjas</li>
+          <li>Plátanos</li>
+        </ul>
+
+        <!-- Lista ordenada (<ol>) con números -->
+        <h3>Lista ordenada</h3>
+        <ol>
+          <li>Primero</li>
+          <li>Segundo</li>
+          <li>Tercero</li>
+        </ol>
+      </section>
+
+      <!-- Sección de tablas -->
+      <section>
+        <h2>Tablas</h2>
+        <!-- <table> define una tabla -->
+        <table>
+          <!-- Fila de encabezados -->
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>País</th>
+          </tr>
+          <!-- Fila 1 -->
+          <tr>
+            <td>Ana</td>
+            <td>25</td>
+            <td>España</td>
+          </tr>
+          <!-- Fila 2 -->
+          <tr>
+            <td>Pedro</td>
+            <td>30</td>
+            <td>México</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Sección de imágenes -->
+      <section>
+        <h2>Imágenes</h2>
+        <!-- <img> inserta imágenes -->
+        <!-- src = URL de la imagen -->
+        <!-- alt = descripción textual (muy importante para accesibilidad y SEO) -->
+        <!-- width/height (opcional) se usa mejor en CSS -->
+        <img
+          src="https://picsum.photos/400/200"
+          alt="Paisaje aleatorio desde picsum"
+        />
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>Ejemplo HTML Nivel Básico © 2025</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+/* ============================= */
+/* RESET BÁSICO */
+/* Elimina márgenes y paddings por defecto del navegador */
+/* Afecta a todos los elementos (*) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que ancho/alto incluyan padding y borde */
+}
+
+/* ============================= */
+/* ESTILOS GENERALES DEL BODY */
+/* Aplica a todo el contenido del sitio */
+body {
+  font-family: Arial, sans-serif; /* Tipografía base */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #333; /* Color del texto */
+  padding: 1rem; /* Espacio interno */
+  max-width: 900px; /* Ancho máximo del contenido */
+  margin: auto; /* Centra horizontalmente */
+}
+
+/* ============================= */
+/* ENCABEZADO Y PIE DE PÁGINA */
+/* Afecta a <header> y <footer> */
+header,
+footer {
+  text-align: center; /* Centra el texto */
+  margin: 2rem 0; /* Espaciado vertical */
+}
+
+/* ============================= */
+/* SECCIONES */
+/* Afecta a todos los <section> */
+section {
+  margin-bottom: 2rem; /* Separa cada bloque */
+}
+
+/* ============================= */
+/* TABLAS */
+/* Estilo para la tabla y sus celdas */
+table {
+  border-collapse: collapse; /* Elimina doble borde entre celdas */
+  width: 100%; /* Que ocupe todo el ancho disponible */
+  margin-top: 1rem;
+  border: 1px solid #ccc; /* Borde externo */
+}
+th,
+td {
+  border: 1px solid #ccc; /* Bordes entre celdas */
+  padding: 0.5rem; /* Espaciado interno */
+  text-align: left; /* Alineación de texto */
+}
+th {
+  background-color: #f4f4f4; /* Fondo distinto para encabezados */
+}
+
+/* ============================= */
+/* LISTAS */
+/* Aplica a <ul> y <ol> */
+ul,
+ol {
+  margin-left: 2rem; /* Sangría a la izquierda */
+  margin-top: 0.5rem;
+}
+
+/* ============================= */
+/* ENLACES */
+/* Aplica a <a> */
+a {
+  color: #0077cc; /* Azul predeterminado */
+  text-decoration: none; /* Quita subrayado */
+}
+a:hover {
+  text-decoration: underline; /* Subrayado en hover */
+}
+
+/* ============================= */
+/* IMÁGENES */
+/* Aplica a <img> */
+img {
+  display: block; /* Evita espacio extra debajo */
+  max-width: 100%; /* Imagen nunca más grande que su contenedor */
+  height: auto; /* Mantiene proporciones */
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 1rem 0; /* Espaciado vertical */
+}

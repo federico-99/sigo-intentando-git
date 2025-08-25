@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dashboard avanzado con HTML5 y CSS moderno, accesible y responsive." />
+  <title>Proyecto Avanzado HTML + CSS</title>
+  <link rel="stylesheet" href="pro.css" />
+</head>
+<body>
+  <!-- HEADER SEMÁNTICO CON NAV ACCESIBLE -->
+  <header role="banner">
+    <div class="logo">🌐 Mi Dashboard</div>
+    <nav role="navigation" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#tarjetas">Tarjetas</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#formulario">Formulario</a></li>
+      </ul>
+    </nav>
+    <form class="busqueda" role="search">
+      <label for="buscar" class="sr-only">Buscar:</label>
+      <input type="search" id="buscar" name="buscar" placeholder="Buscar..." />
+      <button type="submit">🔍</button>
+    </form>
+  </header>
+
+  <!-- HERO PRINCIPAL -->
+  <section id="hero">
+    <h1>Bienvenido a tu Dashboard Avanzado</h1>
+    <p>Usando lo más moderno de HTML5 y CSS3 para un sitio profesional y accesible.</p>
+    <a href="#tarjetas" class="btn">Ver secciones</a>
+  </section>
+
+  <!-- SECCIÓN DE TARJETAS CON GRID -->
+  <section id="tarjetas">
+    <h2>Tarjetas de Información</h2>
+    <div class="grid-cards">
+      <article class="card">
+        <h3>Tarjeta 1</h3>
+        <p>Contenido dinámico con animación al pasar el mouse.</p>
+      </article>
+      <article class="card">
+        <h3>Tarjeta 2</h3>
+        <p>Responsive Grid usando CSS moderno y variables para temas.</p>
+      </article>
+      <article class="card">
+        <h3>Tarjeta 3</h3>
+        <p>Hover effects y transiciones suaves con CSS.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN MULTIMEDIA -->
+  <section id="multimedia">
+    <h2>Multimedia</h2>
+    <figure>
+      <img src="https://picsum.photos/600/300" alt="Ejemplo imagen responsive" />
+      <figcaption>Imagen responsive con <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code></figcaption>
+    </figure>
+    <video controls width="600">
+      <source src="media/video.mp4" type="video/mp4" />
+      <track src="media/subtitulos.vtt" kind="subtitles" srclang="es" label="Español" />
+      Tu navegador no soporta video.
+    </video>
+    <audio controls>
+      <source src="media/audio.mp3" type="audio/mpeg" />
+      Tu navegador no soporta audio.
+    </audio>
+  </section>
+
+  <!-- FORMULARIO AVANZADO -->
+  <section id="formulario">
+    <h2>Formulario Avanzado</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" name="fecha" required />
+
+        <label for="color">Color favorito:</label>
+        <input type="color" id="color" name="color" />
+
+        <label for="nivel">Nivel de satisfacción:</label>
+        <input type="range" id="nivel" name="nivel" min="0" max="10" />
+
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <p>Proyecto Avanzado © 2025 - Accesible y Responsive</p>
+    <p><a href="#hero">Volver arriba</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* ================= Reset básico ================= */
+/* 📌 Aplica un reset ligero a todos los elementos */
+* {
+  box-sizing: border-box; /* 📌 Incluye padding y border dentro del ancho/alto de los elementos */
+  margin: 0;              /* 📌 Elimina márgenes predeterminados del navegador */
+  padding: 0;             /* 📌 Elimina padding predeterminado */
+}
+
+/* ================= Tipografía y layout ================= */
+body {
+  font-family: Arial, sans-serif; /* 📌 Fuente principal */
+  line-height: 1.6;               /* 📌 Altura de línea para mejorar lectura */
+  padding: 1rem;                  /* 📌 Espacio interno alrededor del contenido */
+  max-width: 900px;                /* 📌 Limita el ancho para mejorar legibilidad */
+  margin: auto;                    /* 📌 Centra horizontalmente */
+  color: #333;                     /* 📌 Color de texto principal */
+}
+
+header,
+footer {
+  text-align: center;  /* 📌 Centra el contenido del header y footer */
+  margin: 2rem 0;      /* 📌 Margen arriba y abajo de 2rem */
+}
+
+/* ================= Secciones ================= */
+section {
+  margin-bottom: 2rem; /* 📌 Separación entre secciones */
+}
+
+/* ================= Imágenes ================= */
+img {
+  max-width: 100%;                /* 📌 Que la imagen no exceda el contenedor */
+  height: auto;                   /* 📌 Mantener proporción original */
+  display: block;                 /* 📌 Evita espacios en línea debajo de la imagen */
+  border-radius: 8px;             /* 📌 Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 📌 Sombra ligera para dar profundidad */
+  object-fit: cover;              /* 📌 Ajusta la imagen dentro de su caja sin deformarla */
+}
+
+/* ================= Figuras ================= */
+figure {
+  text-align: center; /* 📌 Centra la figura y el pie de foto */
+  margin: 1rem 0;     /* 📌 Margen vertical */
+}
+
+figcaption {
+  font-size: 0.9rem; /* 📌 Texto más pequeño para pies de foto */
+  color: #555;       /* 📌 Color gris para diferenciar del texto principal */
+  margin-top: 0.5rem;/* 📌 Separación entre imagen y pie de foto */
+}
+
+/* ================= Videos y audios ================= */
+video,
+audio {
+  max-width: 100%;          /* 📌 Que no excedan el ancho del contenedor */
+  display: block;           /* 📌 Evita espacios indeseados */
+  margin: 1rem auto;        /* 📌 Centrado horizontal y margen vertical */
+  border-radius: 8px;       /* 📌 Bordes redondeados */
+}
+
+/* ================= FORMULARIO BÁSICO ================= */
+form {
+  max-width: 400px;          /* 📌 Ancho máximo del formulario */
+  margin: 2rem auto;         /* 📌 Centrado y margen vertical */
+  display: flex;             /* 📌 Flexbox para organizar campos */
+  flex-direction: column;    /* 📌 Coloca los elementos en columna */
+  gap: 1rem;                 /* 📌 Espacio entre cada campo */
+}
+
+label {
+  font-weight: bold;         /* 📌 Resalta los títulos de cada campo */
+}
+
+input,
+textarea,
+select,
+button {
+  padding: 0.5rem;           /* 📌 Espacio interno en los campos */
+  border: 1px solid #ccc;    /* 📌 Borde gris claro */
+  border-radius: 6px;        /* 📌 Bordes redondeados */
+  font-size: 1rem;           /* 📌 Tamaño de letra estándar */
+  width: 100%;               /* 📌 Que ocupen todo el ancho disponible */
+}
+
+button {
+  background-color: #0077cc; /* 📌 Color de fondo azul */
+  color: white;              /* 📌 Texto en blanco */
+  border: none;              /* 📌 Quita borde predeterminado */
+  cursor: pointer;           /* 📌 Cambia el cursor al pasar por el botón */
+  transition: all 0.3s;      /* 📌 Animación suave al cambiar propiedades */
+}
+
+button:hover {
+  background-color: #005fa3; /* 📌 Cambio de color al pasar el mouse */
+}
+
+/* ================= FORMULARIO INTERMEDIO ================= */
+/* 🖱️ Estado cuando el usuario selecciona el campo */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #0077cc; /* 📌 Contorno azul visible al enfocar */
+  border-color: #0077cc;      /* 📌 Cambia el borde al color azul */
+}
+
+fieldset {
+  border: 1px solid #ccc;  /* 📌 Borde gris claro para agrupar campos */
+  padding: 1rem;           /* 📌 Espacio interno */
+  border-radius: 8px;      /* 📌 Bordes redondeados */
+}
+
+legend {
+  font-weight: bold;        /* 📌 Texto del fieldset en negrita */
+  padding: 0 0.5rem;        /* 📌 Espacio horizontal interno */
+}
